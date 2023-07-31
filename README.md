@@ -7,3 +7,4 @@
 * 0x02-shell_redirections
 * 0x03-shell_variables_expansions
 * 0x04. Loops, conditions and parsing
+* 0x05-processes_and_signals
