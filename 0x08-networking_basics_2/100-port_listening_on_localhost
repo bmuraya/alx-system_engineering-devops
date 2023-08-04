@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Bash script listens on port 98 on localhost.
+#  We can conect to localhost on port 98 using telnet 'ie telnet localhost 98'
+#+ and type some text which is sent to the localhost.
+# note: we can use this script across networks as well
+
+nc -l localhost 98
