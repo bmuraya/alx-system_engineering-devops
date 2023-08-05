@@ -5,8 +5,7 @@
 * All Bash script files are interpretable on Ubuntu 20.04 LTS
 * All Bash script files are executable
 * All Bash script was subjected shellcheck without any error
-* The first line of all Bash script is exactly #!/usr/bin/env bash
-* The second line of all Bash script is a comment explaining what the script is doing.
+
 
 
 ***
