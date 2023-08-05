@@ -1,5 +1,14 @@
 # 0x08. Networking basics #1
 ``DevOps`` ``Network`` ``SysAdmin``
+
+### Requirements
+* All Bash script files are interpretable on Ubuntu 20.04 LTS
+* All Bash script files are executable
+* All Bash script was subjected shellcheck without any error
+* The first line of all Bash script is exactly #!/usr/bin/env bash
+* The second line of all Bash script is a comment explaining what the script is doing.
+
+
 ***
 ### Resources
 * [What is 0.0.0.0](https://en.wikipedia.org/wiki/0.0.0.0)
