@@ -1,8 +1,4 @@
 #!/usr/bin/env bash
 # connects to server 52.91.202.224
-<<<<<<< HEAD
 
 ssh -i ~/.ssh/school ubuntu@52.91.202.224
-=======
-ssh -i ~/.ssh/school ubuntu@52.91.202.224
->>>>>>> 07bbf8d6ee0452916bd09b64686f73a4ef79bfc2
