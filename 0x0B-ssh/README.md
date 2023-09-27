@@ -1,7 +1,7 @@
 0x0B. SSH
 
 
-<h2> file Name</h2>
+<h2> <hr>File Name </hr></h2>
 
 <ul>
 <li>0-use_a_private_key</li>
