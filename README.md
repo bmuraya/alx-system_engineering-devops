@@ -17,4 +17,5 @@
 * 0x0F-load_balancer
 * 0x0E-web_stack_debugging_1
 * 0x03. AirBnB clone - Deploy static
+* 0x10-https_ssl
 
