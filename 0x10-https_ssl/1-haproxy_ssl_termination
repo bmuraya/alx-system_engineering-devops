@@ -34,7 +34,7 @@ defaults
         errorfile 504 /etc/haproxy/errors/504.http
 frontend haproxy_balancer
         bind *:80
-        bind *:443 ssl crt /etc/ssl/lb-01.gideonavenue.tech/lb-01.gideonavenue.tech.pem
+        bind *:443 ssl crt /etc/ssl/lb-01.babumuraya.tech/lb-01.babumuraya.tech.pem
 
         redirect scheme https code 301 if !{ ssl_fc }
         # mode http
@@ -51,5 +51,5 @@ backend letsencrypt-backend
 backend webservers
         mode http
         balance roundrobin
-        server 263314-web-01 54.236.47.238:80 check
+        server 263314-web-01 52.3.243.191:80 check
         server 263314-web-02 18.204.5.88:80 check
