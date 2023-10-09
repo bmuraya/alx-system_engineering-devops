@@ -6,6 +6,3 @@ sudo apt-get -y install nginx
 echo "Hello World!" | sudo tee /var/www/html/index.html > /dev/null
 sudo service nginx start
 <<<<<<< HEAD
-
-=======
->>>>>>> 1e037d3c8abbc98d83cd082ccdd522540d01998c
