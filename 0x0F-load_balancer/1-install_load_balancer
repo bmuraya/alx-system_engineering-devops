@@ -51,12 +51,13 @@ defaults
 frontend http-in
     bind *:80
     default_backend web_servers
+    http-request capture req.hdr(Host) len 64
 
 backend web_servers
     balance roundrobin
     server web-01 52.3.243.191:80 check
     server web-02 54.144.143.87:80 check
-    http-response set-header X-Served-By %[req.hdr(Host)]
+    
 EOL
 
 # Restart HAProxy service
