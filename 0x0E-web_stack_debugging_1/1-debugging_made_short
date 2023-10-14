@@ -1,13 +1,5 @@
 #!/usr/bin/env bash
-# Command to make an nginx server listen on port 80
+# Script that make nginx listen to port 80
 ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-
-# Restart Nginx to ensure it's in a known state
-service nginx restart
-
-# Verify if Nginx is running and display its status
-if service nginx status | grep -q "active (running)"; then
-  echo "Nginx is running."
-else
-  echo "Nginx is not running."
-fi
+service nginx start
+kill "$(pgrep 'nginx' | head -1)"
