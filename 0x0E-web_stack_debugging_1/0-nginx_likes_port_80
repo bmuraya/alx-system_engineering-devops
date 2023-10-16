@@ -4,3 +4,7 @@
 rm /etc/nginx/sites-enabled/default
 ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 service nginx restart
+<<<<<<< HEAD
+=======
+
+>>>>>>> b081c7341f1bbd4639fb9483e138450838f6a7b1

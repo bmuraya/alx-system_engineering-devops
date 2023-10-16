@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
+<<<<<<< HEAD
 # Command to make an nginx server listen on port 80, shorter version
 ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 service nginx start
+=======
+# Script that makes nginx listen to port 80
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx restart
+>>>>>>> b081c7341f1bbd4639fb9483e138450838f6a7b1
 kill "$(pgrep 'nginx' | head -1)"
