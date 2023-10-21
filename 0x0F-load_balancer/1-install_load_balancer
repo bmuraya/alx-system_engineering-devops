@@ -1,25 +1,5 @@
 #!/usr/bin/env bash
 # Check if the script is being run as root
-if [ "$(id -u)" != "0" ]; then
-    echo "This script must be run as root. Use 'sudo' to execute it."
-    exit 1
-fi
-
-=======
-# Check if the script is being run as root
-if [ "$(id -u)" != "0" ]; then
-    echo "This script must be run as root. Use 'sudo' to execute it."
-    exit 1
-fi
-
->>>>>>> bab826d66f6955790b16499661132a92da09da5f
-# Update package lists
-apt-get -y update
-
-# Install HAProxy
-apt-get -y install haproxy
-
-<<<<<<< HEAD
 # Configure HAProxy
 sudo sed -i -e '$a\listen http-in\n\tbind :80\n\tbalance roundrobin\n\tserver 263314-web-01 52.3.243.191:80 check\n\tserver 263314-web-02 54.144.143.87:80 check\n' /etc/haproxy/haproxy.cfg
 sudo service haproxy restart
@@ -69,7 +49,7 @@ frontend http-in
 backend web_servers
     balance roundrobin
     server web-01 52.3.243.191:80 check
-    server web-02 54.144.143.87:80 check
+    server web-02 54.87.178.205:80 check
     
 EOL
 
