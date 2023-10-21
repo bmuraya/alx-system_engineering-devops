@@ -1,27 +1,20 @@
-# Puppet manifest to install nginx
+#setup nginx
 
-exec { 'install_nginx':
-  provider => shell,
-  command  => 'sudo apt-get -y update; sudo apt-get -y install nginx; echo "Hello World!" | sudo tee /var/www/html/index.nginx-debian.html',
+package {
+    'nginx':
+    ensure => installed,
 }
 
-file_line { 'nginx_redirect_rule':
-  path    => '/etc/nginx/sites-available/default',
-  line    => 'rewrite ^/redirect_me https://github.com/bmuraya permanent;',
-  match   => 'server_name _;',
-  ensure  => present,
-  require => Exec['install_nginx'],
-  notify  => Service['nginx'],
+file {'/var/www/html/index.nginx-debian.html':
+    content => 'Hello World!',
 }
 
-service { 'nginx':
-  ensure    => 'running',
-  enable    => true,
-  require   => File_line['nginx_redirect_rule'],
+file_line {'configure redirection':
+    path  =>  '/etc/nginx/sites-available/default',
+    after =>  'server_name _;',
+    line  =>  "\n\tlocation /redirect_me {\n\t\treturn 301 https://youtu.be/dQw4w9WgXcQ;\n\t}\n",
 }
 
-exec { 'restart_nginx':
-  command  => 'sudo service nginx restart',
-  require  => File_line['nginx_redirect_rule'],
+service {'nginx':
+    ensure => running,
 }
-
