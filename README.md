@@ -23,10 +23,7 @@
 * 0x13-firewall
 * 0x14-mysql
 * 0x15. API
-<<<<<<< HEAD
+* 0x17. Web stack debugging #3
 * 0x1A-application_server
-=======
-* 0x16-api_advanced
->>>>>>> 751f91fe695db539c1880b7843228dde9ebe0a13
 
 
